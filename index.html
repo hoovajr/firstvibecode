@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productivity Garden</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>🌱 Productivity Garden</h1>
+      <p class="tagline">Every task you finish grows something new.</p>
+    </header>
+
+    <section class="stats">
+      <div class="stat-card">
+        <span class="stat-value" id="stat-completed">0</span>
+        <span class="stat-label">Plants Grown</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="stat-streak">0</span>
+        <span class="stat-label">Day Streak</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="stat-pending">0</span>
+        <span class="stat-label">Seeds Waiting</span>
+      </div>
+    </section>
+
+    <section class="garden-wrap">
+      <div class="garden" id="garden">
+        <div class="garden-empty" id="garden-empty">Complete a task to plant your first flower 🌼</div>
+      </div>
+      <div class="garden-ground"></div>
+    </section>
+
+    <section class="task-input-wrap">
+      <form id="task-form" autocomplete="off">
+        <input type="text" id="task-input" placeholder="What do you want to accomplish?" required maxlength="80">
+        <select id="task-type" title="Choose a plant type">
+          <option value="flower">🌼 Flower</option>
+          <option value="tree">🌳 Tree</option>
+          <option value="succulent">🌵 Succulent</option>
+          <option value="mushroom">🍄 Mushroom</option>
+        </select>
+        <button type="submit">Plant Seed</button>
+      </form>
+    </section>
+
+    <section class="task-list-wrap">
+      <h2>Seeds &amp; Sprouts</h2>
+      <ul id="task-list"></ul>
+    </section>
+
+    <footer class="app-footer">
+      <button id="reset-btn" title="Clear all data">Reset Garden</button>
+    </footer>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
